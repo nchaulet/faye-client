@@ -6,18 +6,29 @@ use Nc\FayeClient\Adapter\AdapterInterface;
 
 class Client
 {
-	protected $adapter;
+    protected $adapter;
 
-	protected $fayeServerUrl;
+    protected $fayeServerUrl;
 
-	public function __construct(AdapterInterface $adapter, $fayeServerUrl)
-	{
-		$this->adapter = $adapter;
-		$this->fayeServerUrl = $fayeServerUrl;
-	}
+    /**
+     * Client constructor
+     * @param AdapterInterface $adapter       Http adapter to post JSON
+     * @param string           $fayeServerUrl Url for faye server with mount poing
+     */
+    public function __construct(AdapterInterface $adapter, $fayeServerUrl)
+    {
+        $this->adapter       = $adapter;
+        $this->fayeServerUrl = $fayeServerUrl;
+    }
 
-	public function send($channel, $data = array(), $ext = array())
-	{
-		$this->adapter->postJSON($this->fayeServerUrl, json_encode(array('channel' => $channel, 'data' => $data, 'ext' => $ext)));
-	}
+    /**
+     * Send message
+     * @param  string $channel message channel
+     * @param  array  $data    Data to send
+     * @param  array  $ext     Extra data
+     */
+    public function send($channel, $data = array(), $ext = array())
+    {
+        $this->adapter->postJSON($this->fayeServerUrl, json_encode(array('channel' => $channel, 'data' => $data, 'ext' => $ext)));
+    }
 }
