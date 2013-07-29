@@ -2,7 +2,7 @@
     "name": "nc/faye-client",
     "keywords": ["faye", "websocket"],
     "description": "Php client for interacting with faye server",
-    "licence" : "MIT",
+    "license" : "MIT",
     "authors": [
         {
             "name": "nchaulet",
