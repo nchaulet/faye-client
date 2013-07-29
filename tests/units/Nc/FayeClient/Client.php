@@ -23,7 +23,7 @@ class Client extends test
 			->if($client->send('/channel', array('data1' => 'test'), array('ext1' => 'test')))
 				->mock($mockedAdapter)
 					->call('postJSON')
-						->withIdenticalArguments('http://test.fr', '{"channel":"\/channel","data":{"data1":"test"}}')
+						->withIdenticalArguments('http://test.fr', '{"channel":"\/channel","data":{"data1":"test"},"ext":{"ext1":"test"}}')
 						->once();
 	}
 }

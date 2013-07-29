@@ -1,5 +1,6 @@
 {
     "name": "nc/faye-client",
+    "keywords": ["faye", "websocket"],
     "description": "Php client for interacting with faye server",
     "licence" : "MIT",
     "authors": [
