@@ -6,6 +6,16 @@ PHP 5.3+ library to push message to a faye server.
 
 [http://faye.jcoglan.com/](http://faye.jcoglan.com/)
 
+## Instalation 
+
+via composer
+
+	require  : {
+		"nc/faye-client": "~1.0",
+		# if you want to use guzzle adapter
+		"guzzle/guzzle": "~3.0"
+	}
+
 ## Usage
 
 	$adapter = new \Nc\FayeClient\Adapter\GuzzleAdapter;
