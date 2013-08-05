@@ -4,10 +4,22 @@ namespace Nc\FayeClient;
 
 use Nc\FayeClient\Adapter\AdapterInterface;
 
+/**
+ * Client for sending faye message
+ */
 class Client
 {
+
+    /**
+     * Http Adapter
+     * @var Adapter\AdapterInterface
+     */
     protected $adapter;
 
+    /**
+     * Faye server url
+     * @var string
+     */
     protected $fayeServerUrl;
 
     /**
@@ -23,9 +35,9 @@ class Client
 
     /**
      * Send message
-     * @param  string $channel message channel
-     * @param  array  $data    Data to send
-     * @param  array  $ext     Extra data
+     * @param string $channel message channel
+     * @param array  $data    Data to send
+     * @param array  $ext     Extra data
      */
     public function send($channel, $data = array(), $ext = array())
     {

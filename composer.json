@@ -20,6 +20,6 @@
         "guzzle/guzzle": "~3.0"
     },
     "autoload": {
-        "psr-0": { "Nc\\FayeClient": "lib/" }
+        "psr-0": { "Nc\\FayeClient": "src/" }
     }
 }
