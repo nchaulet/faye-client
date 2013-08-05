@@ -33,3 +33,8 @@ via composer
      * @param  array  $ext     Extra data
      */
     public function send($channel, $data = array(), $ext = array())
+
+## Run test
+
+     php vendor/bin/atoum -D tests/ -bf tests/bootstrap.php 
+
