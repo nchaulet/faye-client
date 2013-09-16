@@ -22,7 +22,7 @@ via composer
 
 	$client = new Nc\FayeClient\Client($adapter, 'http://127.0.0.1/faye');
 
-	$client->send("/channel1", array("name" => "foo"), array("token" => "456454sdqd"))
+	$client->send("/channel1", array("name" => "foo"), array("token" => "456454sdqd"));
 
 ## Client Send method documentation
 
