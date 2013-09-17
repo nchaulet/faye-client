@@ -6,7 +6,7 @@ PHP 5.3+ library to push message to a faye server.
 
 [http://faye.jcoglan.com/](http://faye.jcoglan.com/)
 
-## Instalation 
+## Instalation
 
 via composer
 
@@ -18,7 +18,7 @@ via composer
 
 ## Usage
 
-	$adapter = new \Nc\FayeClient\Adapter\GuzzleAdapter;
+	$adapter = new \Nc\FayeClient\Adapter\CurlAdapter;
 
 	$client = new Nc\FayeClient\Client($adapter, 'http://127.0.0.1/faye');
 
@@ -34,7 +34,12 @@ via composer
      */
     public function send($channel, $data = array(), $ext = array())
 
+## Adapter to post JSON
+
+	* CurlAdapter   : `Nc\FayeClient\Adapter\CurlAdapter`
+	* GuzzleAdapter : `Nc\FayeClient\Adapter\GuzzleAdapter`
+
 ## Run test
 
-     php vendor/bin/atoum -D tests/ -bf tests/bootstrap.php 
+     php vendor/bin/atoum -D tests/ -bf tests/bootstrap.php
 
