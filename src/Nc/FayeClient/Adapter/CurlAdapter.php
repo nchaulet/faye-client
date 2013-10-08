@@ -29,7 +29,7 @@ class CurlAdapter implements AdapterInterface
 		    'Content-Length: ' . strlen($body))                                                                       
 		);                                                                                                                   
 		 
-		$result = curl_exec($curl);
+		curl_exec($curl);
 
 		curl_close($curl);
     }
