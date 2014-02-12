@@ -2,3 +2,4 @@ image: bradrydzewski/node:0.10
 script: 
     - sleep 2
     - npm test
+    
