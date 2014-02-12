@@ -1,5 +1,13 @@
-image: bradrydzewski/node:0.10
-script: 
-    - sleep 2
-    - npm test
-    
+image: mischief/docker-golang
+env:
+  - GOPATH=/var/cache/drone
+script:
+  - go build
+  - go test -v
+services:
+  - redis
+notify:
+  email:
+    recipients:
+      - brad@drone.io
+      - burke@drone.io
