@@ -9,7 +9,7 @@ namespace Nc\FayeClient\Adapter;
 /**
  * Interface for HTTP adapter to make a post Request
  */
-Interface AdapterInterface
+interface AdapterInterface
 {
     /**
      * Exec a post request with json content type
@@ -19,5 +19,4 @@ Interface AdapterInterface
      * @return null
      */
     public function postJSON($url, $body);
-
 }

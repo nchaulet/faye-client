@@ -1,6 +1,7 @@
 <?php
 
 namespace Nc\FayeClient\Adapter;
+
 use Guzzle\Service\ClientInterface;
 use Guzzle\Service\Client;
 
@@ -9,6 +10,11 @@ use Guzzle\Service\Client;
  */
 class GuzzleAdapter implements AdapterInterface
 {
+    /**
+     * @var ClientInterface
+     */
+    private $client;
+
     /**
      * Constructor
      * @param ClientInterface $client Guzzle client
