@@ -12,7 +12,7 @@ via composer
 
 ``` js
 {
-    require  : {
+    "require": {
         "nc/faye-client": "~1.0",
         # if you want to use guzzle adapter
         "guzzle/guzzle": "~3.0"
@@ -23,9 +23,9 @@ via composer
 ## Usage
 
 ``` php
-$adapter = new \Nc\FayeClient\Adapter\CurlAdapter;
+$adapter = new \Nc\FayeClient\Adapter\CurlAdapter();
 
-$client = new Nc\FayeClient\Client($adapter, 'http://127.0.0.1/faye');
+$client = new \Nc\FayeClient\Client($adapter, 'http://127.0.0.1/faye');
 
 $client->send("/channel1", array("name" => "foo"), array("token" => "456454sdqd"));
 ```
