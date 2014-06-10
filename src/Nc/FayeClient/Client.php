@@ -41,6 +41,10 @@ class Client
      */
     public function send($channel, $data = array(), $ext = array())
     {
-        $this->adapter->postJSON($this->fayeServerUrl, json_encode(array('channel' => $channel, 'data' => $data, 'ext' => $ext)));
+        $this->adapter->postJSON($this->fayeServerUrl, json_encode(array(
+            'channel' => $channel,
+            'data' => $data,
+            'ext' => $ext,
+        )));
     }
 }
